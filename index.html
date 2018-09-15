@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>자라나라 머리머리</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/nomalize.css" media="all">
+	<style type="text/css">
+		#main{width: 1053px; margin: auto; margin-top: 150px;}
+		#mrb{width: auto;}
+		#spg{height: 676px;}
+	
+		#mrm {position: absolute; animation-name: a1; animation-duration: 3s; top: 155px; left: 510px; transition: all 3s; animation-delay: 6s;}
+
+	</style>
+</head>
+
+<body>
+
+<div id="main">
+	<img src="mrb.jpg" id="mrb">
+	<img src="spg.jpg" id="spg">
+	<img src="mrm.jpg" id="mrm">
+</div>
+
+<audio loop id="jalanala">
+	  <source src="jalanala.mp3" type="audio/mpeg">
+
+<script type="text/javascript">
+	
+	var toggle = "off";
+
+	spg.onclick = function () {
+			if(toggle == "off") {
+				mrm.style.top = "-332px";
+				spg.setAttribute("src","spg.gif");
+				toggle = "on";
+				jalanala.play()
+			}else{
+				mrm.style.top = "155px";
+				spg.setAttribute("src","spg.jpg");
+				toggle ="off";
+				jalanala.pause();
+			}
+		}
+
+</script>
+
+</body>
+</html>
